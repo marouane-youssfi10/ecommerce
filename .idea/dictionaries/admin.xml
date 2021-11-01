@@ -2,6 +2,7 @@
   <dictionary name="admin">
     <words>
       <w>avanue</w>
+      <w>colone</w>
       <w>endblock</w>
       <w>fontawesome</w>
       <w>greatkart</w>
@@ -9,6 +10,7 @@
       <w>paypal</w>
       <w>pythonpath</w>
       <w>superadmin</w>
+      <w>tgoul</w>
     </words>
   </dictionary>
 </component>

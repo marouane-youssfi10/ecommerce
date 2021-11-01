@@ -12,7 +12,7 @@ class MyAccountManager(BaseUserManager):
 
         user = self.model(
             email=self.normalize_email(email),
-            usernam=username,
+            username=username,
             first_name=first_name,
             last_name=last_name,
         )
