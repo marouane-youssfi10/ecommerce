@@ -66,6 +66,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                # tell setting we are using context_processors in our project & menu_links it will be available in all templates
+                'category.context_processors.menu_links',
             ],
         },
     },
