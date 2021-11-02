@@ -70,6 +70,7 @@ TEMPLATES = [
 
                 # tell setting we are using context_processors in our project & menu_links it will be available in all templates
                 'category.context_processors.menu_links',
+                'carts.context_processors.counter',
             ],
         },
     },
