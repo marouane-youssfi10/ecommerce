@@ -10,6 +10,7 @@ class Category(models.Model):
 
     def get_url(self):
         # return for example jeans
+        # path('<slug:category_slug>/', views.store, name='products_by_category'),
         return reverse('products_by_category', args=[self.slug])
 
     class Meta:
