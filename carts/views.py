@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from django.core.exceptions import ObjectDoesNotExist
 # Create your views here.
 
-# add _ in the first function to make it private
+# add _ in the first function to make it private function
 def _cart_id(request):
      cart = request.session.session_key
      if not cart:
