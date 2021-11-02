@@ -11,7 +11,7 @@ class Category(models.Model):
     def get_url(self):
         # return for example jeans
         return reverse('products_by_category', args=[self.slug])
-    
+
     class Meta:
         verbose_name = 'category'
         verbose_name_plural = 'categories'
