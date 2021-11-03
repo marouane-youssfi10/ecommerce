@@ -1,9 +1,29 @@
 from django.shortcuts import render
 from .forms import RegistrationForm
+from .models import Account
 # Create your views here.
 
 def register(request):
-    form = RegistrationForm()
+    if request.method == 'POST':
+        print('-------- if --------')
+        form = RegistrationForm(request.POST)
+        # using clean data for fetch the value from the request
+        if form.is_valid():
+            first_name = form.cleaned_data['first_name']
+            last_name = form.cleaned_data['last_name']
+            phone_number = form.cleaned_data['phone_number']
+            email = form.cleaned_data['email']
+            password = form.cleaned_data['password']
+            username = email.split('@')[0]
+            # confirm_password = form.cleaned_data['confirm_password']
+
+            user = Account.objects.create_user(first_name=first_name, last_name=last_name,
+                                               email=email, username=username, password=password)
+            user.phone_number = phone_number
+            user.save()
+    else:
+        print('-------- else --------')
+        form = RegistrationForm()
 
     context = {
         'form': form
