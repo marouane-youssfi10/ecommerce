@@ -13,18 +13,20 @@ def _cart_id(request):
      return cart
 
 def add_cart(request, product_id):
+     product = Product.objects.get(id=product_id)
+     product_variation = []
      if request.method == 'POST':
           for item in request.POST:
                key = item
                value = request.POST[key]
 
-               try:
-                    variation = Variation.objects.get(variation_category__iexcat=key, variation_value__iexact=value)
-                    print(variation)
-               except:
-                    print('----- except -----')
-                    pass
-     product = Product.objects.get(id=product_id)
+               print('key: ', key, ' ', 'value : ', value)
+               if key != 'csrfmiddlewaretoken':
+                    try:
+                         variation = Variation.objects.get(product=product, variation_category__iexact=key, variation_value__iexact=value)
+                         product_variation.append(variation)
+                    except:
+                         pass
 
      # this block for to take session_id
      try:

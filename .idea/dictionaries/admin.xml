@@ -7,6 +7,7 @@
       <w>borderless</w>
       <w>cartitems</w>
       <w>colone</w>
+      <w>csrfmiddlewaretoken</w>
       <w>dlist</w>
       <w>dropdown</w>
       <w>endblock</w>
@@ -16,6 +17,7 @@
       <w>icontext</w>
       <w>itemside</w>
       <w>navbar</w>
+      <w>nkey</w>
       <w>pagetop</w>
       <w>paypal</w>
       <w>pythonpath</w>
