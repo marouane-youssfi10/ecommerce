@@ -2,6 +2,7 @@
   <dictionary name="admin">
     <words>
       <w>abloh</w>
+      <w>autoescape</w>
       <w>avanue</w>
       <w>avialable</w>
       <w>borderless</w>
@@ -11,9 +12,11 @@
       <w>csrfmiddlewaretoken</w>
       <w>dlist</w>
       <w>dropdown</w>
+      <w>endautoescape</w>
       <w>endblock</w>
       <w>endfor</w>
       <w>fontawesome</w>
+      <w>gmail</w>
       <w>greatkart</w>
       <w>icontext</w>
       <w>idex</w>
@@ -24,12 +27,15 @@
       <w>paypal</w>
       <w>pythonpath</w>
       <w>signin</w>
+      <w>smtp</w>
       <w>streetwear</w>
       <w>superadmin</w>
       <w>tgoul</w>
       <w>toggler</w>
       <w>transp</w>
+      <w>uidb</w>
       <w>unselect</w>
+      <w>ymarouane</w>
     </words>
   </dictionary>
 </component>
