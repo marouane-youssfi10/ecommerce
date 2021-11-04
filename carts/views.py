@@ -3,6 +3,7 @@ from store.models import Product, Variation
 from .models import CartItem, Cart
 from django.http import HttpResponse
 from django.core.exceptions import ObjectDoesNotExist
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 # add _ in the first function to make it private function
@@ -129,6 +130,8 @@ def cart(request, total=0, quantity=0, cart_items=None):
      }
      return render(request, 'store/cart.html', context)
 
+
+@login_required(login_url='login')
 def checkout(request, total=0, quantity=0, cart_items=None):
      tax = 0
      grand_total = 0
