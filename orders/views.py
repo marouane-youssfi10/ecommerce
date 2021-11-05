@@ -10,6 +10,10 @@ from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
 
 
+def payments(request):
+    return render(request, 'orders/payments.html')
+
+
 def place_order(request, total=0, quantity=0,):
     current_user = request.user
 
